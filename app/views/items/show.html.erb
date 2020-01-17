@@ -1,0 +1,3 @@
+<h1>画像詳細</h1>
+<p><%= image_tag @item.image_url(:thumb) %></p>
+<p><%= link_to '削除', item_path(@item.id), method: :delete, class: 'btn btn-primary'%></p>

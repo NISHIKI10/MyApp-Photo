@@ -1,0 +1,10 @@
+<h1>画像一覧</h1>
+<% if user_signed_in? %>
+  <% @items.each do |item| %>
+    <hr>
+    <%= link_to item.user, item_path(item.id)%>さんが投稿
+    <p><%= image_tag item.image_url(:thumb) %></p>
+  <% end %>
+<% else %>
+  <p>ログインしてください</p>
+<% end %>

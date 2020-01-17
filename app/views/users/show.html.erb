@@ -1,0 +1,6 @@
+<h2><span>email: </span><%= @user.email %></h2>
+<hr>
+<p>投稿した画像</p>
+<% @items.each do |item| %>
+  <p><%= image_tag item.image_url(:thumb) %></p>
+<% end %>
